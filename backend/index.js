@@ -1,6 +1,6 @@
 import express from 'express';
 import mysql from 'mysql';
-
+import cors from 'cors';
 
 // creating my express server
 const app = express();
@@ -44,6 +44,8 @@ bookshelfDb.query(createTableQuery, (err, result) => {
 // converts it (json string) to a javascript object & attaches it to request.body
 // then finally pushes the request to the route handler function to use
 app.use(express.json());
+// allow backend server to be accessed by the client (frontend) to fetch the api data
+app.use(cors());
 
 // home route
 app.get('/', (req, res) => {
@@ -78,7 +80,7 @@ app.post('/books', (req, res) => {
 
 // express server application listening on port 3000
 app.listen(8800, () => {
-    console.log('********** Backend connected (Express server is running on port 8800) ********** ');
+    console.log('********** Backend connected (Express server is running on port 8800) **********\n');
 });
 
 // enter this code in mysql to clear auth msql error
