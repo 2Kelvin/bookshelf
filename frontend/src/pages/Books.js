@@ -43,7 +43,9 @@ export default function Books() {
                             <h2>{book.title}</h2>
                             <p>{book.description}</p>
                             <span>{book.isAvailable}</span>
-                            <button>Update</button>
+                            <button>
+                                <Link to={`/update/${book.id}`}>Update</Link>
+                            </button>
                             <button onClick={() => handleDeleteBook(book.id)}>
                                 Delete
                             </button>

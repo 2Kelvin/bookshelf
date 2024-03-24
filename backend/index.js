@@ -79,15 +79,33 @@ app.post('/books', (req, res) => {
     });
 });
 
-// deleting a book route
+// route for deleting a book
 // deleting the book whose 'id' is given
-app.delete('/books/:id', (req, res) => {
+app.delete('/books/:bookId', (req, res) => {
     // getting the book id from url parameters
-    const bookId = req.params.id;
+    const bookId = req.params.bookId;
     const deleteBookQuery = 'DELETE FROM books WHERE id = ?';
     bookshelfDb.query(deleteBookQuery, [bookId], (err, data) => {
         if (err) return res.json(err);
         return res.json('A book has been deleted');
+    });
+});
+
+// route for updating a book
+// updating the book whose 'id' is given
+app.put('/books/:bookId', (req, res) => {
+    // getting the book id from url parameters
+    const bookId = req.params.bookId;
+    const updateBookQuery = 'UPDATE books SET `title` = ?, `description` = ?, `cover` = ?, `isAvailable` = ? WHERE id = ?';
+    const bookValues = [
+        req.body.title,
+        req.body.description,
+        req.body.cover,
+        req.body.isAvailable,
+    ];
+    bookshelfDb.query(updateBookQuery, [...bookValues, bookId], (err, data) => {
+        if (err) return res.json(err);
+        return res.json('The book has been updated');
     });
 });
 
