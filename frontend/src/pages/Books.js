@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Books() {
     // books contains the all the books fetched from the api (array of book objects)
@@ -36,6 +37,10 @@ export default function Books() {
                     ))
                 }
             </div>
+
+            <button>
+                <Link to='/add'>Add a book</Link>
+            </button>
         </div>
     );
 }

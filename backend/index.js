@@ -31,7 +31,7 @@ const bookshelfDb = mysql.createConnection({
 });
 
 // creating 'books' table in bookstore db
-const createTableQuery = 'CREATE TABLE IF NOT EXISTS books (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, title VARCHAR(80) NOT NULL, description VARCHAR(255) NOT NULL, cover VARCHAR(80) NULL)';
+const createTableQuery = 'CREATE TABLE IF NOT EXISTS books (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, title VARCHAR(80) NOT NULL, description VARCHAR(255) NOT NULL, cover VARCHAR(80) NULL, isAvailable VARCHAR(5) NOT NULL)';
 bookshelfDb.query(createTableQuery, (err, result) => {
     if (err) {
         console.error(err);
@@ -65,12 +65,13 @@ app.get('/books', (req, res) => {
 
 // creating a new book into bookshelf.books table
 app.post('/books', (req, res) => {
-    const addBooksQuery = 'INSERT INTO books (`title`, `description`, `cover`) VALUES (?)';
+    const addBooksQuery = 'INSERT INTO books (`title`, `description`, `cover`, `isAvailable`) VALUES (?)';
     // new book info will be accessed thro the request's body
     const bookValues = [
         req.body.title,
         req.body.description,
         req.body.cover,
+        req.body.isAvailable,
     ];
     bookshelfDb.query(addBooksQuery, [bookValues], (err, data) => {
         if (err) return res.json(err);
