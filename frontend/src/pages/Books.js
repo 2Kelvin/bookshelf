@@ -21,6 +21,16 @@ export default function Books() {
         fetchAllBooks();
     }, []);
 
+    async function handleDeleteBook(bookId) {
+        try {
+            await axios.delete(`http://localhost:8800/books/${bookId}`);
+            // refreshing the browser page
+            window.location.reload();
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
     return (
         <div>
             <h1>The Bookshelf</h1>
@@ -33,6 +43,10 @@ export default function Books() {
                             <h2>{book.title}</h2>
                             <p>{book.description}</p>
                             <span>{book.isAvailable}</span>
+                            <button>Update</button>
+                            <button onClick={() => handleDeleteBook(book.id)}>
+                                Delete
+                            </button>
                         </div>
                     ))
                 }
