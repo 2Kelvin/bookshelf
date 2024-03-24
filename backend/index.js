@@ -40,10 +40,14 @@ bookshelfDb.query(createTableQuery, (err, result) => {
     console.log('books table created successfully:', result);
 });
 
+// middleware that parses the json string sent from client
+// converts it (json string) to a javascript object & attaches it to request.body
+// then finally pushes the request to the route handler function to use
+app.use(express.json());
 
 // home route
 app.get('/', (req, res) => {
-    res.json('This is the backend');
+    res.json('This is the backend home route');
 });
 
 // books routes
@@ -59,8 +63,18 @@ app.get('/books', (req, res) => {
 
 // creating a new book into bookshelf.books table
 app.post('/books', (req, res) => {
-    
-})
+    const addBooksQuery = 'INSERT INTO books (`title`, `description`, `cover`) VALUES (?)';
+    // new book info will be accessed thro the request's body
+    const bookValues = [
+        req.body.title,
+        req.body.description,
+        req.body.cover,
+    ];
+    bookshelfDb.query(addBooksQuery, [bookValues], (err, data) => {
+        if (err) return res.json(err);
+        return res.json(data);
+    });
+});
 
 // express server application listening on port 3000
 app.listen(8800, () => {
