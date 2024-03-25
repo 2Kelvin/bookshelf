@@ -47,7 +47,7 @@ export default function Books() {
                                 <p className='avail'>Available: <span>{book.isAvailable}</span></p>
                                 <div>
                                     <button className='updateBtn'>
-                                        <Link to={`/update/${book.id}`}>Update</Link>
+                                        <Link to={`/update/${book.id}`} style={{ color: 'green' }}>Update</Link>
                                     </button>
                                     <button
                                         className='deleteBtn'
@@ -62,9 +62,11 @@ export default function Books() {
                 }
             </div>
 
-            <button className='addBookBtn'>
-                <Link to='/add'>Add a book</Link>
-            </button>
+            <div className='addBtnDiv'>
+                <button className='addBookBtn' >
+                    <Link to='/add' style={{ color: 'white' }}>Add a book</Link>
+                </button>
+            </div>
         </div>
     );
 }

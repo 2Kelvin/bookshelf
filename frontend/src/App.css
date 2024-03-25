@@ -94,18 +94,24 @@ a,
 a:visited,
 a:active {
     text-decoration: none;
-    color: green;
 }
 
 .addBookBtn {
     border: none;
     cursor: pointer;
-    border: 1px solid green;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     border-radius: 2rem;
     font-family: "Cantarell", sans-serif;
     font-weight: bold;
     text-decoration: none;
-    width: 10rem;
-    margin-bottom: 2rem;
+    width: 12rem;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    color: white;
+    background-color: black;
+}
+
+.addBtnDiv {
+    display: flex;
+    justify-content: center;
 }
