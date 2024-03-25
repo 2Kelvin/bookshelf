@@ -1,1 +1,56 @@
+/* ************************ App ************************ */
+.App {
+    height: calc(100vh - 2rem);
+    padding: 1rem;
+    margin: 0;
+}
 
+/* ************************ Books ************************ */
+.containerBooks {
+    margin: 0;
+    padding: 0;
+}
+
+.containerBooks h1 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.books {
+    margin: 0;
+    padding: 0;
+}
+
+.book {
+    display: flex;
+    height: 16rem;
+    margin-bottom: 2rem;
+
+}
+
+.book img {
+    height: 100%;
+    width: 4rem;
+    background-color: yellow;
+    flex: 1;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.book .bookDetails {
+    flex: 1;
+    padding-left: 1rem;
+    padding-right: 0.2rem;
+}
+
+.bookDetails h2 {
+    margin-bottom: 0;
+}
+
+.bookDetails .bookDesc {
+    font-size: 0.9rem;
+}
+
+.bookDetails .updateBtn {}
+.bookDetails .deleteBtn {}

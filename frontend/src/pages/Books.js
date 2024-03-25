@@ -32,7 +32,7 @@ export default function Books() {
     }
 
     return (
-        <div>
+        <div className='containerBooks'>
             <h1>The Bookshelf</h1>
             <div className='books'>
                 {
@@ -40,16 +40,18 @@ export default function Books() {
                     books.map((book) => (
                         <div className='book' key={book.id}>
                             {book.cover && <img src={book.cover} alt='book' />}
-                            <h2>{book.title}</h2>
-                            <p>{book.author}</p>
-                            <p>{book.description}</p>
-                            <span>{book.isAvailable}</span>
-                            <button>
-                                <Link to={`/update/${book.id}`}>Update</Link>
-                            </button>
-                            <button onClick={() => handleDeleteBook(book.id)}>
-                                Delete
-                            </button>
+                            <div className='bookDetails'>
+                                <h2>{book.title}</h2>
+                                <p>Author: {book.author}</p>
+                                <p className='bookDesc'>{book.description}</p>
+                                <p>Available: <span>{book.isAvailable}</span></p>
+                                <button className='updateBtn'>
+                                    <Link to={`/update/${book.id}`}>Update</Link>
+                                </button>
+                                <button className='deleteBtn' onClick={() => handleDeleteBook(book.id)}>
+                                    Delete
+                                </button>
+                            </div>
                         </div>
                     ))
                 }
