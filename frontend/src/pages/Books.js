@@ -41,7 +41,7 @@ export default function Books() {
                         <div className='book' key={book.id}>
                             {book.cover && <img src={book.cover} alt='book' />}
                             <div className='bookDetails'>
-                                <h2>{book.title}</h2>
+                                <h3>{book.title}</h3>
                                 <p>Author: {book.author}</p>
                                 <p className='bookDesc'>{book.description}</p>
                                 <p className='avail'>Available: <span>{book.isAvailable}</span></p>
