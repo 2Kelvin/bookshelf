@@ -44,10 +44,14 @@ export default function Books() {
                                 <h3>{book.title}</h3>
                                 <p>Author: {book.author}</p>
                                 <p className='bookDesc'>{book.description}</p>
-                                <p className='avail'>Available: <span>{book.isAvailable}</span></p>
+                                <p className='avail'>
+                                    Available: <span className={String(book.isAvailable).toLowerCase() === 'yes' ? 'yesBk' : 'noBk'}>
+                                        {book.isAvailable}
+                                    </span>
+                                </p>
                                 <div>
                                     <button className='updateBtn'>
-                                        <Link to={`/update/${book.id}`} style={{ color: 'green' }}>Update</Link>
+                                        <Link to={`/update/${book.id}`} className='updateLink'>Update</Link>
                                     </button>
                                     <button
                                         className='deleteBtn'

@@ -1,14 +1,25 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --myGreen: #0BC16F;
+    --gradientGreen: #C4FDB8;
+    --gradientBlue: #77F5FF;
+    --myRed: #e00909;
+}
+
 /* ************************ App ************************ */
 .App {
-    height: calc(100vh - 2rem);
-    padding: 1rem;
+    height: 100vh;
     margin: 0;
 }
 
+
 /* ************************ Books ************************ */
 .containerBooks {
+    padding: 1rem;
     margin: 0;
-    padding: 0;
     padding-top: 2rem;
     width: 100%;
 }
@@ -29,7 +40,7 @@
 
 .book {
     display: flex;
-    height: 20rem;
+    height: 22rem;
     margin-bottom: 2rem;
     width: 100%;
 
@@ -69,30 +80,52 @@
     margin-bottom: 2rem;
 }
 
+.yesBk {
+    color: green;
+}
+
+.noBk {
+    color: red;
+}
+
 .bookDetails .deleteBtn,
 .bookDetails .updateBtn {
     border: none;
     cursor: pointer;
-    border: 1px solid green;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
-    font-weight: 550;
     text-decoration: none;
+    background-color: transparent;
 }
 
 .bookDetails .updateBtn {
+    border: 1px solid var(--myGreen);
     margin-right: 2rem;
-    color: greenyellow;
 }
 
-.bookDetails .updateBtn:visited,
+.bookDetails .updateBtn:hover,
 .bookDetails .updateBtn:active {
-    color: greenyellow;
+    background-color: var(--myGreen);
+}
+
+.updateLink {
+    color: var(--myGreen);
+}
+
+.updateLink:active,
+.updateLink:hover {
+    color: white;
 }
 
 .bookDetails .deleteBtn {
-    border: 1px solid red;
-    color: red;
+    border: 1px solid var(--myRed);
+    color: var(--myRed);
+}
+
+.bookDetails .deleteBtn:active,
+.bookDetails .deleteBtn:hover {
+    background-color: var(--myRed);
+    color: white;
 }
 
 a,
@@ -106,8 +139,6 @@ a:active {
     cursor: pointer;
     padding: 1.5rem 2rem;
     border-radius: 2rem;
-    font-family: "Cantarell", sans-serif;
-    font-weight: bold;
     text-decoration: none;
     width: 12rem;
     font-size: 1.1rem;
@@ -120,4 +151,65 @@ a:active {
     display: flex;
     justify-content: center;
     margin: 3rem 0 1rem 0;
+}
+
+
+/* ************************ Add | Update ************************ */
+.containerAddUpdate {
+    background: linear-gradient(var(--gradientGreen), var(--gradientBlue));
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.addBookForm {
+    background-color: white;
+    margin: 0;
+    padding: 2rem;
+    height: 25rem;
+    width: 22rem;
+    border-radius: 2rem;
+}
+
+.addBookForm h1 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 3rem;
+}
+
+.addBookForm input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid var(--gradientBlue);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    width: 100%;
+}
+
+.addBookForm input::placeholder {
+    opacity: 0.3;
+    font-family: "Poppins", sans-serif;
+}
+
+.addBookForm button {
+    border: none;
+    cursor: pointer;
+    border: 1px solid var(--myGreen);
+    padding: 0.8rem 0;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: var(--myGreen);
+    margin-top: 2rem;
+    width: 7rem;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+.addBookForm button:active,
+.addBookForm button:hover {
+    background-color: var(--myGreen);
+    color: white;
 }

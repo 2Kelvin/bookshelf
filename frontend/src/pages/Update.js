@@ -37,40 +37,42 @@ export default function Update() {
     }
 
     return (
-        <div className='addBookForm'>
-            <h1>Update Book</h1>
-            <input
-                type='text'
-                placeholder='Book title'
-                name='title'
-                onChange={handleInputChange}
-            />
-            <input
-                type='text'
-                placeholder='Book author'
-                name='author'
-                onChange={handleInputChange}
-            />
-            <input
-                type='text'
-                placeholder='Book description'
-                name='description'
-                onChange={handleInputChange}
-            />
-            <input
-                type='text'
-                placeholder='Book cover'
-                name='cover'
-                onChange={handleInputChange}
-            />
-            <input
-                type='text'
-                placeholder='Is the book available?'
-                name='isAvailable'
-                onChange={handleInputChange}
-            />
+        <div className='containerAddUpdate'>
+            <div className='addBookForm'>
+                <h1>Update Book</h1>
+                <input
+                    type='text'
+                    placeholder='Book title'
+                    name='title'
+                    onChange={handleInputChange}
+                />
+                <input
+                    type='text'
+                    placeholder='Book author'
+                    name='author'
+                    onChange={handleInputChange}
+                />
+                <input
+                    type='text'
+                    placeholder='Book description'
+                    name='description'
+                    onChange={handleInputChange}
+                />
+                <input
+                    type='text'
+                    placeholder='Book cover'
+                    name='cover'
+                    onChange={handleInputChange}
+                />
+                <input
+                    type='text'
+                    placeholder='Is the book available?'
+                    name='isAvailable'
+                    onChange={handleInputChange}
+                />
 
-            <button onClick={handleUpdateBook}>Update</button>
+                <button onClick={handleUpdateBook}>Update</button>
+            </div>
         </div>
     );
 }
