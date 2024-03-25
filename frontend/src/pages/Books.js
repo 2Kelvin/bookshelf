@@ -44,20 +44,25 @@ export default function Books() {
                                 <h2>{book.title}</h2>
                                 <p>Author: {book.author}</p>
                                 <p className='bookDesc'>{book.description}</p>
-                                <p>Available: <span>{book.isAvailable}</span></p>
-                                <button className='updateBtn'>
-                                    <Link to={`/update/${book.id}`}>Update</Link>
-                                </button>
-                                <button className='deleteBtn' onClick={() => handleDeleteBook(book.id)}>
-                                    Delete
-                                </button>
+                                <p className='avail'>Available: <span>{book.isAvailable}</span></p>
+                                <div>
+                                    <button className='updateBtn'>
+                                        <Link to={`/update/${book.id}`}>Update</Link>
+                                    </button>
+                                    <button
+                                        className='deleteBtn'
+                                        onClick={() => handleDeleteBook(book.id)}
+                                    >
+                                        Delete
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     ))
                 }
             </div>
 
-            <button>
+            <button className='addBookBtn'>
                 <Link to='/add'>Add a book</Link>
             </button>
         </div>

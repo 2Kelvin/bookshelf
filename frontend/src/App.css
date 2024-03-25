@@ -24,14 +24,14 @@
 
 .book {
     display: flex;
-    height: 16rem;
+    height: 20rem;
     margin-bottom: 2rem;
 
 }
 
 .book img {
     height: 100%;
-    width: 4rem;
+    width: 100%;
     background-color: yellow;
     flex: 1;
     border-radius: 2rem;
@@ -42,15 +42,70 @@
     flex: 1;
     padding-left: 1rem;
     padding-right: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .bookDetails h2 {
     margin-bottom: 0;
 }
 
+.bookDetails p {
+    margin: 0.5rem 0;
+}
+
 .bookDetails .bookDesc {
     font-size: 0.9rem;
 }
 
-.bookDetails .updateBtn {}
-.bookDetails .deleteBtn {}
+.bookDetails .avail {
+    margin-bottom: 2rem;
+}
+
+.bookDetails .deleteBtn,
+.bookDetails .updateBtn {
+    border: none;
+    cursor: pointer;
+    border: 1px solid green;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-family: "Cantarell", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bookDetails .updateBtn {
+    margin-right: 2rem;
+    color: greenyellow;
+}
+
+.bookDetails .updateBtn:visited,
+.bookDetails .updateBtn:active {
+    color: greenyellow;
+}
+
+.bookDetails .deleteBtn {
+    border: 1px solid red;
+    color: red;
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: green;
+}
+
+.addBookBtn {
+    border: none;
+    cursor: pointer;
+    border: 1px solid green;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-family: "Cantarell", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    width: 10rem;
+    margin-bottom: 2rem;
+}
