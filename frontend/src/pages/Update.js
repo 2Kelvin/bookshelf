@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 export default function Update() {
     const [newBook, setNewBook] = useState({
         title: '',
+        author: '',
         description: '',
         cover: '',
         isAvailable: '',
@@ -42,6 +43,12 @@ export default function Update() {
                 type='text'
                 placeholder='Book title'
                 name='title'
+                onChange={handleInputChange}
+            />
+            <input
+                type='text'
+                placeholder='Book author'
+                name='author'
                 onChange={handleInputChange}
             />
             <input
