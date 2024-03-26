@@ -1,5 +1,5 @@
 # Bookstore
 
-![bookshelfui](https://github.com/2Kelvin/bookstore/assets/85868026/7493efba-1bf7-45a5-8c75-02fcb53f19b2)
+![bookshelfFinal](https://github.com/2Kelvin/bookshelf/assets/85868026/13d7928d-3603-45d7-b714-3f9cee878b7b)
 
 A bookstore app built using React, NodeJS and MySQL.
