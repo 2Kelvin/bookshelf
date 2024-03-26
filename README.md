@@ -90,12 +90,12 @@ Access your MySQL in your terminal:
 
 If you have a MySQL password run:
 ```sh
-sudo -u root -p
+sudo mysql -u root -p
 ```
 
 If you don't have a MySQL password run:
 ```sh
-sudo -u root
+sudo mysql -u root
 ```
 
 Then:
