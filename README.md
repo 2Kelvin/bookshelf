@@ -17,7 +17,7 @@ To successfully run bookshelf web application, you need these packages / softwar
 - [x] MySQL
 - [x] NodeJS | NPM
 
-## Usage
+## Installation
 
 Clone the project:
 
@@ -113,6 +113,10 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
 ```
 
 You can now rerun your backend server again as described above.
+
+## Usage
+
+To add a book to the website, click the black add button which will navigate you to this add a book page.
 
 ## Contribution
 
