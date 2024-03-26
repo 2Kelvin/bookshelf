@@ -67,9 +67,9 @@ export default function Books() {
             </div>
 
             <div className='addBtnDiv'>
-                <button className='addBookBtn' >
-                    <Link to='/add' style={{ color: 'white' }}>Add a book</Link>
-                </button>
+                <Link to='/add'>
+                    <button className='addBookBtn'>Add a book</button>
+                </Link>
             </div>
         </div>
     );

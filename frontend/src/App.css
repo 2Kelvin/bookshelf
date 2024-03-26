@@ -11,8 +11,8 @@ html {
 
 /* ************************ App ************************ */
 .App {
-    height: 100vh;
     margin: 0;
+    background: linear-gradient(var(--gradientGreen), var(--gradientBlue));
 }
 
 
