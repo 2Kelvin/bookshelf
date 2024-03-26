@@ -1,10 +1,10 @@
 # The Bookshelf
 
-![bookshelfFinal](https://github.com/2Kelvin/bookshelf/assets/85868026/13d7928d-3603-45d7-b714-3f9cee878b7b)
+![updatedBoookshelf](https://github.com/2Kelvin/bookshelf/assets/85868026/97721d14-97c9-43f0-88d7-3ef3fac86b6b)
 
 ## Introduction
 
-The Bookshelf is a web app built for book study groups to upload details of books they have to share with the community and have them know if they're available for them to pick up and read.
+The Bookshelf is a web app built for book clubs to upload books they have to share with the community and have them know if they're available for them to pick up and have a read.
 
 The Bookshellf is built using React, NodeJS and MySQL.
 

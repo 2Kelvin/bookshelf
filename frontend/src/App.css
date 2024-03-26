@@ -21,6 +21,7 @@ html {
     margin: 0;
     padding: 0.5rem;
     padding-top: 2rem;
+    min-height: 94vh;
 }
 
 .containerBooks h1 {
@@ -66,15 +67,27 @@ html {
 }
 
 .bookDetails h3 {
-    margin-top: 0;
+    margin: 0;
 }
 
 .bookDetails p {
-    margin: 0.2rem 0;
+    margin: 0.1rem 0;
+}
+
+.bookDetails .bkAuthor {
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0.6;
 }
 
 .bookDetails .bookDesc {
     font-size: 0.9rem;
+    margin: 0.7rem 0;
+
+}
+
+.bookDetails .bookOwner {
+    margin: 0;
 }
 
 .bookDetails .avail {

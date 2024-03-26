@@ -8,6 +8,7 @@ export default function Update() {
         author: '',
         description: '',
         cover: '',
+        owner: '',
         isAvailable: '',
     });
 
@@ -62,6 +63,12 @@ export default function Update() {
                     type='text'
                     placeholder='Book cover url'
                     name='cover'
+                    onChange={handleInputChange}
+                />
+                <input
+                    type='text'
+                    placeholder='Your first and last name'
+                    name='owner'
                     onChange={handleInputChange}
                 />
                 <input

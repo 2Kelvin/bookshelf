@@ -42,8 +42,9 @@ export default function Books() {
                             {book.cover && <img src={book.cover} alt='book' />}
                             <div className='bookDetails'>
                                 <h3>{book.title}</h3>
-                                <p>Author: {book.author}</p>
+                                <p className='bkAuthor'>by {book.author}</p>
                                 <p className='bookDesc'>{book.description}</p>
+                                <p className='bookOwner'>Owner: {book.owner}</p>
                                 <p className='avail'>
                                     Available: <span className={String(book.isAvailable).toLowerCase() === 'yes' ? 'yesBk' : 'noBk'}>
                                         {book.isAvailable}

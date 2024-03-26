@@ -31,7 +31,7 @@ const bookshelfDb = mysql.createConnection({
 });
 
 // creating 'books' table in bookshelf db
-const createTableQuery = 'CREATE TABLE IF NOT EXISTS books (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, title VARCHAR(80) NOT NULL, author VARCHAR(150) NOT NULL, description VARCHAR(255) NOT NULL, cover VARCHAR(80) NULL, isAvailable VARCHAR(5) NOT NULL)';
+const createTableQuery = 'CREATE TABLE IF NOT EXISTS books (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, title VARCHAR(80) NOT NULL, author VARCHAR(150) NOT NULL, description VARCHAR(255) NOT NULL, cover VARCHAR(80) NULL, owner VARCHAR(80) NOT NULL, isAvailable VARCHAR(5) NOT NULL)';
 bookshelfDb.query(createTableQuery, (err, result) => {
     if (err) {
         console.error(err);
@@ -65,13 +65,14 @@ app.get('/books', (req, res) => {
 
 // creating a new book into bookshelf.books table
 app.post('/books', (req, res) => {
-    const addBooksQuery = 'INSERT INTO books (`title`, `author`, `description`, `cover`, `isAvailable`) VALUES (?)';
+    const addBooksQuery = 'INSERT INTO books (`title`, `author`, `description`, `cover`, `owner`, `isAvailable`) VALUES (?)';
     // new book info will be accessed thro the request's body
     const bookValues = [
         req.body.title,
         req.body.author,
         req.body.description,
         req.body.cover,
+        req.body.owner,
         req.body.isAvailable,
     ];
     bookshelfDb.query(addBooksQuery, [bookValues], (err, data) => {
@@ -97,12 +98,13 @@ app.delete('/books/:bookId', (req, res) => {
 app.put('/books/:bookId', (req, res) => {
     // getting the book id from url parameters
     const bookId = req.params.bookId;
-    const updateBookQuery = 'UPDATE books SET `title` = ?, `author` = ?, `description` = ?, `cover` = ?, `isAvailable` = ? WHERE id = ?';
+    const updateBookQuery = 'UPDATE books SET `title` = ?, `author` = ?, `description` = ?, `cover` = ?, `owner` = ?, `isAvailable` = ? WHERE id = ?';
     const bookValues = [
         req.body.title,
         req.body.author,
         req.body.description,
         req.body.cover,
+        req.body.owner,
         req.body.isAvailable,
     ];
     bookshelfDb.query(updateBookQuery, [...bookValues, bookId], (err, data) => {
