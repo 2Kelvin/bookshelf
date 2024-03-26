@@ -118,6 +118,8 @@ You can now rerun your backend server again as described above.
 
 To add a book to the website, click the black add button which will navigate you to this add a book page.
 
+![addBk](https://github.com/2Kelvin/bookshelf/assets/85868026/bc27a8c3-835c-4b0f-90ef-fb1e13a80ead)
+
 ## Contribution
 
 Feel free to contact me if you want to collaborate on this project.
