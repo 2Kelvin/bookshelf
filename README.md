@@ -112,7 +112,7 @@ If you don't have a MySQL password, run this command:
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
 ```
 
-You can now rerun your backend server again as described [above](##installation).
+You can now rerun your backend server again as described [above](#installation).
 
 ## Usage
 
