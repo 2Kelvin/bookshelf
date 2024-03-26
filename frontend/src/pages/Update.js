@@ -60,7 +60,7 @@ export default function Update() {
                 />
                 <input
                     type='text'
-                    placeholder='Book cover'
+                    placeholder='Book cover url'
                     name='cover'
                     onChange={handleInputChange}
                 />

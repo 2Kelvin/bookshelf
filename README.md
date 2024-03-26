@@ -116,9 +116,13 @@ You can now rerun your backend server again as described above.
 
 ## Usage
 
-To add a book to the website, click the black add button which will navigate you to this add a book page.
+![nwBook](https://github.com/2Kelvin/bookshelf/assets/85868026/39f04c2c-3543-4ebc-85f3-76d8ff773644)
 
-![addBk](https://github.com/2Kelvin/bookshelf/assets/85868026/bc27a8c3-835c-4b0f-90ef-fb1e13a80ead)
+To add a book to the website, click the black add button which will navigate you to this add a book page. Fill all the fields and finally to add your book click add button. If you book was successfully added, you should be navigated to the home page where you'll see the new book you just added.
+
+Tip: For the book cover url add an online image link url to the book's cover.
+
+Note: I found a bug in this field where url on some image links doesn't work, I don't know why. The image links that worked for me, were the amazon website book's cover image link.
 
 ## Contribution
 
