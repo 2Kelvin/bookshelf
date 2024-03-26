@@ -118,7 +118,7 @@ You can now rerun your backend server again as described [above](#installation).
 
 ## Usage
 
-![updatedAdd](https://github.com/2Kelvin/bookshelf/assets/85868026/272d26c4-aba0-45f1-b7a4-9cdb6d8fb132)
+![updatedAddPage](https://github.com/2Kelvin/bookshelf/assets/85868026/e45c6ade-4e51-4c00-83d8-3c84eb6e734a)
 
 To add a book to the website, click the black 'add' button on the web page which will navigate you to 'add a book' page. Fill all the fields and finally to add your book click the 'add' button. If your book was successfully added, you should be navigated to the home page where you'll see the new book.
 
