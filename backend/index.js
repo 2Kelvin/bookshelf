@@ -12,7 +12,7 @@ const sqlConnection = mysql.createConnection({
     password: '',
 });
 
-// creating 'bookstore' db
+// creating 'bookshelf' db
 const createDbQuery = 'CREATE DATABASE IF NOT EXISTS bookshelf';
 sqlConnection.query(createDbQuery, (err, result) => {
     if (err) {
@@ -22,7 +22,7 @@ sqlConnection.query(createDbQuery, (err, result) => {
     console.log('bookshelf database created successfully:', result);
 });
 
-// connecting to mysql 'bookstore' database
+// connecting to mysql 'bookshelf' database
 const bookshelfDb = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -30,7 +30,7 @@ const bookshelfDb = mysql.createConnection({
     database: 'bookshelf',
 });
 
-// creating 'books' table in bookstore db
+// creating 'books' table in bookshelf db
 const createTableQuery = 'CREATE TABLE IF NOT EXISTS books (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, title VARCHAR(80) NOT NULL, author VARCHAR(150) NOT NULL, description VARCHAR(255) NOT NULL, cover VARCHAR(80) NULL, isAvailable VARCHAR(5) NOT NULL)';
 bookshelfDb.query(createTableQuery, (err, result) => {
     if (err) {
