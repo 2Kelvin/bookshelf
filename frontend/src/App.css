@@ -12,7 +12,7 @@ html {
 /* ************************ App ************************ */
 .App {
     margin: 0;
-    background: linear-gradient(rgba(196, 253, 184, 0.6), rgba(0, 238, 255, 0.6));
+    background: linear-gradient(rgba(196, 253, 184, 0.2), rgba(0, 238, 255, 0.3));
 }
 
 
