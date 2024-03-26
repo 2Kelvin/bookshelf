@@ -15,7 +15,7 @@ The application is not complete yet, there are so many other features that will 
 To successfully run bookshelf web application, you need these packages / software:
 
 - [x] MySQL
-- [x] NodeJS | NPM
+- [x] NodeJS | npm
 
 ## Installation
 
@@ -112,7 +112,7 @@ If you don't have a MySQL password, run this command:
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
 ```
 
-You can now rerun your backend server again as described above.
+You can now rerun your backend server again as described [above](https://github.com/2Kelvin/bookshelf#installation).
 
 ## Usage
 
@@ -120,7 +120,9 @@ You can now rerun your backend server again as described above.
 
 To add a book to the website, click the black add button which will navigate you to this add a book page. Fill all the fields and finally to add your book click add button. If you book was successfully added, you should be navigated to the home page where you'll see the new book you just added.
 
-Tip: For the book cover url add an online image link url to the book's cover.
+You can update the book details by clicking the update button. A book can also be deleted by clicking the delete button.
+
+:bulb: Tip: For the book cover url add an online image link url to the book's cover. Preferably use amazon's book covers.
 
 Note: I found a bug in this field where url on some image links doesn't work, I don't know why. The image links that worked for me, were the amazon website book's cover image link.
 
