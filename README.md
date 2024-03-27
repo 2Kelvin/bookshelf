@@ -4,7 +4,7 @@
 
 ## Introduction
 
-The Bookshelf is a web app built for book clubs to upload books they have to share with the community and have them know if they're available for them to pick up and have a read.
+The Bookshelf is a web app built for book club members to upload books they have to share with the community and have them know if they're available for them to pick up and have a read.
 
 The Bookshellf is built using React, NodeJS and MySQL.
 
